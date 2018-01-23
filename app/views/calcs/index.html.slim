@@ -1,17 +1,20 @@
-h1 Привет!
-h3 Для расчета стоимости доставки нажми труляля
 .message
 .calculator
   = form_for @calc = Calc.new, remote: true do |f|
-    p = f.label :delivery_from
-    p = f.collection_select :delivery_from_id, City.all, :id, :title, {}, { class: 'form-control dropdown-toggle'}
-    / p = f.text_field :delivery_from
-    p = f.label :delivery_to
-    p = f.collection_select :delivery_to_id, City.all, :id, :title, {}, { class: 'form-control dropdown-toggle'}
-    p = f.label :cargo_width
-    p = f.text_field :cargo_width
-    p = f.label :cargo_height
-    p = f.text_field :cargo_height
-    p = f.label :cargo_depth
-    p = f.text_field :cargo_depth
-    p = f.submit 'Рассчитать'
+    .delivery_from
+      = f.label :delivery_from
+      = f.collection_select :delivery_from_id, City.all, :id, :title, {}, { class: 'form-control dropdown-toggle'}
+    .delivery_to
+      = f.label :delivery_to
+      = f.collection_select :delivery_to_id, City.all, :id, :title, {}, { class: 'form-control dropdown-toggle'}
+    .cargo_width
+      = f.label :cargo_width, 'ширина'
+      = f.text_field :cargo_width, size: 10
+    .cargo_height
+      = f.label :cargo_height, 'высота'
+      = f.text_field :cargo_height, size: 10
+    .cargo_depth
+      = f.label :cargo_depth, 'глубина'
+      = f.text_field :cargo_depth, size: 10
+    .submit
+      = f.submit 'Рассчитать', class: 'btn btn-md btn-primary'
