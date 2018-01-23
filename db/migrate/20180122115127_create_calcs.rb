@@ -6,8 +6,8 @@ class CreateCalcs < ActiveRecord::Migration[5.1]
       t.integer :cargo_width
       t.integer :cargo_height
       t.integer :cargo_depth
-      t.integer :value_weight
-      t.integer :cost
+      t.float :value_weight
+      t.float :cost
 
       t.timestamps
     end

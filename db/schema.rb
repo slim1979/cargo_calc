@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20180122115127) do
     t.integer "cargo_width"
     t.integer "cargo_height"
     t.integer "cargo_depth"
-    t.integer "value_weight"
-    t.integer "cost"
+    t.float "value_weight"
+    t.float "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

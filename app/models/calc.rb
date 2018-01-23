@@ -9,7 +9,7 @@ class Calc < ApplicationRecord
   private
 
   def calculate_cost
-    self.value_weight = (cargo_width * cargo_height * cargo_depth) / 5000
-    self.cost = [delivery_from.zone.cost, delivery_to.zone.cost].max * value_weight
+    self.value_weight = ((cargo_width * cargo_height * cargo_depth).fdiv 5000).round(2)
+    self.cost = ([delivery_from.zone.cost, delivery_to.zone.cost].max * value_weight).round(2)
   end
 end
