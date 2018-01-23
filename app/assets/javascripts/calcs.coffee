@@ -11,7 +11,7 @@ result = ->
       $('.message').append(message)
 
 call_to_new_calculation = ->
-  $('.want_more').on 'click', (e) ->
+  $('.link_to_new_calculation').on 'click', (e) ->
     e.preventDefault()
     $('.calculator').show()
 
