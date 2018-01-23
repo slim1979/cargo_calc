@@ -1,0 +1,17 @@
+h1 Привет!
+h3 Для расчета стоимости доставки нажми труляля
+
+.calculator
+  = form_for @calc = Calc.new, remote: true do |f|
+    p = f.label :delivery_from
+    p = f.collection_select :delivery_from_id, City.all, :id, :title, {}, { class: 'form-control dropdown-toggle'}
+    / p = f.text_field :delivery_from
+    p = f.label :delivery_to
+    p = f.collection_select :delivery_to_id, City.all, :id, :title, {}, { class: 'form-control dropdown-toggle'}
+    p = f.label :cargo_width
+    p = f.text_field :cargo_width
+    p = f.label :cargo_height
+    p = f.text_field :cargo_height
+    p = f.label :cargo_depth
+    p = f.text_field :cargo_depth
+    p = f.submit 'Рассчитать'
