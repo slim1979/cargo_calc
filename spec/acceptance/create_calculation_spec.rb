@@ -24,9 +24,9 @@ feature 'New calculation create', %q{
 
     select from_city.title, from: 'calc[delivery_from_id]'
     select to_city.title,   from: 'calc[delivery_to_id]'
-    fill_in 'Cargo width', with: 10
-    fill_in 'Cargo height', with: 20
-    fill_in 'Cargo depth', with: 30
+    fill_in 'ширина', with: 10
+    fill_in 'высота', with: 20
+    fill_in 'глубина', with: 30
     click_on 'Рассчитать'
     expect(page).to_not have_css '.new_calc'
   end
@@ -35,9 +35,9 @@ feature 'New calculation create', %q{
 
     select from_city.title, from: 'calc[delivery_from_id]'
     select to_city.title,   from: 'calc[delivery_to_id]'
-    fill_in 'Cargo width', with: 10
-    fill_in 'Cargo height', with: 20
-    fill_in 'Cargo depth', with: 30
+    fill_in 'ширина', with: 10
+    fill_in 'высота', with: 20
+    fill_in 'глубина', with: 30
     click_on 'Рассчитать'
 
     from_city_cost = from_city.zone.cost
