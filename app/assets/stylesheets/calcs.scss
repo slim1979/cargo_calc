@@ -1,3 +1,29 @@
 // Place all the styles related to the Calcs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.calculator{
+  width: 500px;
+  height: 300px;
+  vertical-align: middle;
+  margin: 10px auto;
+}
+.delivery_from,
+.delivery_to{
+  width:45%
+}
+.delivery_from,
+.cargo_width,
+.cargo_height,
+.cargo_depth{
+  float: left;
+}
+.delivery_to{
+  float:right;
+}
+.cargo_depth,
+.cargo_width,
+.cargo_height{
+  margin-top: 10px;
+  margin-left: 10px;
+}
