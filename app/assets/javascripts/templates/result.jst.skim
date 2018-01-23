@@ -1,4 +1,5 @@
 .result
-  p Отправление: #{@delivery_from} - #{@delivery_to}, #{@calculation.value_weight} кг, #{@calculation.cargo_width} х #{@calculation.cargo_height} х #{@calculation.cargo_depth}
-  p Стоимость: #{@calculation.cost}
-a href='' class='want_more' Рассчитать другую доставку
+  .departure Отправление: #{@delivery_from} - #{@delivery_to}, #{@calculation.value_weight} кг, #{@calculation.cargo_width} х #{@calculation.cargo_height} х #{@calculation.cargo_depth}
+  .cost Стоимость: $#{@calculation.cost}
+.link_to_new_calculation
+  a href='' class='want_more' Рассчитать другую доставку
